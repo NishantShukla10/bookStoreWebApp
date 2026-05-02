@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+
+
+@layer base {
+  body {
+    @apply font-sans bg-parchment text-ink;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-2.5 bg-gold text-white text-sm font-medium tracking-wide rounded-sm hover:bg-gold-dark transition-colors duration-200 cursor-pointer border-0;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-2.5 bg-transparent border border-gold text-gold-light text-sm font-medium tracking-wide rounded-sm hover:bg-gold/10 transition-colors duration-200 cursor-pointer;
+  }
+  .btn-ink {
+    @apply inline-flex items-center justify-center px-5 py-2 bg-ink text-white text-sm font-medium rounded-sm hover:bg-ink-light transition-colors duration-200 cursor-pointer border-0;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center px-3 py-1.5 bg-red-600 text-white text-xs font-medium rounded-sm hover:bg-red-700 transition-colors duration-200 cursor-pointer border-0;
+  }
+  .btn-edit {
+    @apply inline-flex items-center justify-center px-3 py-1.5 bg-sage text-white text-xs font-medium rounded-sm hover:bg-sage-dark transition-colors duration-200 cursor-pointer border-0;
+  }
+  .form-input {
+    @apply w-full px-3 py-2.5 border border-black/10 rounded bg-parchment/60 text-ink text-sm font-sans focus:outline-none focus:border-gold focus:bg-white transition-colors duration-200;
+  }
+  .section-label {
+    @apply text-xs tracking-widest uppercase text-gold mb-1;
+  }
+}
+
+.page-enter {
+  animation: fadeUp 0.3s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@theme {
+  /* Font Families */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  /* Colors */
+  --color-ink: #1a1410;
+  --color-ink-light: #2e261e;
+  
+  --color-parchment: #f7f3ec;
+  --color-warm: #e8dfc8;
+
+  --color-gold: #c9922a;
+  --color-gold-light: #f0c96a;
+  --color-gold-dark: #b07d1e;
+
+  --color-rust: #9b3a1a;
+
+  --color-sage: #4a6741;
+  --color-sage-dark: #3a5432;
+}
