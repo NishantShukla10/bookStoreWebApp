@@ -1,7 +1,10 @@
 import axios from "axios";
 
+// const API = axios.create({
+//   baseURL: "http://localhost:8080/api/v1/books",
+// });
 const API = axios.create({
-  baseURL: "http://localhost:8080/api/v1/books",
+  baseURL: "https://bookstorewebapp-backend-ea5z.onrender.com/api/v1/books",
 });
 
 // GET all books
